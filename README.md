@@ -1,20 +1,19 @@
-
-# Plugin migrato per utilizzo di PHP8
-
-**Importante**  
-Con l'aiuto di AI usando void editor è stato modificato il codice.  
-Anche il layout dei folders.  
-Inoltre siccome vendor\google\apiclient-services\ 
-ha all'interno un 'mondo' di servizi che non usiamo,
-in questo repository ho lasciato **solo**  
-
-vendor\google\apiclient-services\src\Google\Service\Oauth2\   
-
-Testato e funziona!!  (@20250819)
+# MantisBT GoogleAuth Plugin
+--------
 
 
+[TOC]
 
-# Contenuto del README.md originale
+## @20250819
+- Folder layout semplified  
+- Using documentation from https://github.com/googleapis/google-api-php-client/issues/2177  
+  to cleanup  vendor\google\apiclient-services\src\Google\Service
+
+  in order to leave only Oauth2
+
+- tested with PHP8 and MantisBT 2.27.1
+
+
 Features
 --------
 1. Add Google oauth 2.0 support to login to MantisBT.
@@ -42,5 +41,26 @@ Supported Versions
 ------------------
 
 - MantisBT 1.2.x - supported
-- MantisBT 1.3.x - **not supported**
-- MantisBT 2.6 and higher - supported
+- MantisBT 2.x - supported (repository master branch)
+
+Plugin Folder Structure
+-----------------------
+Struct has been changed to follow the MantisBT suggested folder structure and naming convention
+
+./GoogleAuth/pages
+./GoogleAuth/files
+./GoogleAuth/library
+
+Operations Flow
+-----------------------
+If installation was ok, when you access MantisBT login page you will see a new button
+
+![](.//screens/login_screen_with_sign_in_with_google_button.png)
+
+When you click on button 'Sign in with google' you will see something similar to:  
+
+![](.//screens/google_signin_screen.png)  
+
+Or this  
+
+![](.//screens/google_account_choice.png)  
