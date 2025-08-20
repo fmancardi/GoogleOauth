@@ -1,0 +1,22 @@
+{
+    "require": {
+        "google/apiclient": "^2.0",
+        "google/apiclient-services": "^0.22"
+    },
+    "autoload": {
+        "classmap": [
+            "vendor/google/apiclient-services/src"
+        ]
+    },
+    "config": {
+        "process-timeout": 3600
+    },
+    "scripts": {
+        "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Oauth2"
+        ]
+    }
+}
